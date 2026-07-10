@@ -22,6 +22,7 @@ Route::get('/jeux/{jeu}/avis', [AvisController::class, 'index']);
 Route::get('/categories',  [CategorieController::class, 'index']);
 Route::get('/plateformes', [PlateformeController::class, 'index']);
 Route::get('/developpeurs',[DeveloppeurController::class, 'index']);
+Route::get('/stats/public', [AdminController::class, 'publicStats']);
 
 //  ROUTES PRIVÉES (connecté)
 Route::middleware('auth:sanctum')->group(function () {
